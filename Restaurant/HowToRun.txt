@@ -1,0 +1,36 @@
+ 
+To install dependencies & run the projects
+    - need node installed on your computer and postgres
+    - I personally use yarn to handle package management, the project will also work as expected with npm, but please remove the yarn.lock files if you intend to use npm
+    - Inside each project - yarn install/ npm install
+
+To run the apps
+yarn start/ npm run start
+
+Please make sure you first start the BE
+
+the apps will run on 3 ports
+BE - 5000
+Client - 5001
+Vendor - 5002
+
+In order to configure BE
+inside the src/database/db.sql there is the structure for the postgres DB - please add it by hand in postgres
+- there is code to add 10 restaurants - please modify the commands with the user_ids generated after you register 2 users - if you want data, otherwise feel free to create the restaurants from vendor UI
+
+to connect with your db
+
+at root level, there is a .env file which contains the credentials to DB - if you don't see the file - please enable hidden files
+The default config for PG is set there, you will need to update
+PG_USER=
+PG_PASSWORD=
+
+with your values
+
+The BE has logs for ease of debug, feel free to brag about that :)
+
+There might be typos in the projects - if you find them and consider them annoying, feel free to edit them - in theory eveything works as expected
+There are pieces of code that are not in the best condition - there are un-used deps/ react props that are not configured with propTypes
+
+IF you itnent to add the projects to github, add a .gitignore with Node preset
+
